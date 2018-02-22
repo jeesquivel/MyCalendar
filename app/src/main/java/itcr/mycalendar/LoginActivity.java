@@ -18,6 +18,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        connectSQLite miniServer = new connectSQLite(this, "bd users",null,1);
     }
 
 
