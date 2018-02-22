@@ -8,6 +8,7 @@ import android.view.View;
 
 /**
  * este es un comentario de chinoo
+ * la vara esta asi
  */
 
 public class LoginActivity extends AppCompatActivity {
@@ -18,7 +19,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-//maee! que putas
 
     public void iniciarButtonOnClick(View view){
         Intent intent = new Intent(this,MainMenu.class);
