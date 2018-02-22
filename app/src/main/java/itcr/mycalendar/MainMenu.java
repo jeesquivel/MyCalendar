@@ -1,5 +1,6 @@
 package itcr.mycalendar;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -41,6 +42,8 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        connectSQLite conn = new connectSQLite(this, "bd_users", null, 1);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -53,18 +56,19 @@ public class MainMenu extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
     }
 
+    public void onClick(View view){
+        Intent myIntent=null;
+        switch (view.getId()){
+            case R.id.btn_SighUp:
+                myIntent = new Intent(MainMenu.this, SignInActivity.class);
+                break;
+        }
+        if (myIntent == null){
+            startActivity(myIntent);
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

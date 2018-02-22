@@ -13,7 +13,7 @@ public class Utilities {
 
 
 
-    public static final String createUserTable = "CREATE_TABLE "+UserTable+" ("+UserNickname+"TEXT, "+UserFullname+" TEXT, "+Passwords+" TEXT)";
+    public static final String createUserTable = "CREATE TABLE "+UserTable+" ("+UserNickname+" TEXT, "+UserFullname+" TEXT, "+Passwords+" TEXT)";
 
 
 }
