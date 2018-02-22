@@ -5,6 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+
+/**
+ * este es un comentario de chinoo
+ */
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
