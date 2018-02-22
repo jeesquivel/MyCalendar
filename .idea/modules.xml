@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyCalendar.iml" filepath="$PROJECT_DIR$/MyCalendar.iml" />
+      <module fileurl="file://C:\Users\Jeison\StudioProjects\MyCalendar\MyCalendar.iml" filepath="C:\Users\Jeison\StudioProjects\MyCalendar\MyCalendar.iml" />
       <module fileurl="file://C:\Users\Monserrath\AndroidStudioProjects\MyCalendar\MyCalendar.iml" filepath="C:\Users\Monserrath\AndroidStudioProjects\MyCalendar\MyCalendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Jeison\StudioProjects\MyCalendar\app\app.iml" filepath="C:\Users\Jeison\StudioProjects\MyCalendar\app\app.iml" />
       <module fileurl="file://C:\Users\Monserrath\AndroidStudioProjects\MyCalendar\app\app.iml" filepath="C:\Users\Monserrath\AndroidStudioProjects\MyCalendar\app\app.iml" />
     </modules>
   </component>

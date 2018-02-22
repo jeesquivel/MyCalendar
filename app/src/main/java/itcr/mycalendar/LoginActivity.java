@@ -7,10 +7,9 @@ import android.view.View;
 
 
 /**
- * este es un comentario de chinoo
- * la vara esta asi
- * maes really
+ * Te amo KEILYN <3
  */
+
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void signUpButtonOnClick(View view){
-        Intent intent=  new Intent(this,SingInActivity.class );
+        Intent intent=  new Intent(this,SignInActivity.class );
         startActivity(intent);
     }
 

@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SingInActivity" />
+        <activity android:name=".SignInActivity" />
         <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu"
