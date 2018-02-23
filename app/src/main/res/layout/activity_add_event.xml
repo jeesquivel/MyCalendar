@@ -83,13 +83,13 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="64dp"
         android:text="Event:"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/etxt_Event"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -111,6 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
+        android:background="@color/colorAccent"
         android:text="Save"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />

@@ -17,6 +17,7 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
         btn_SelectHour = (Button) findViewById(R.id.btn_SelectHour);
 
         etxt_Date=(EditText) findViewById(R.id.etxt_Date);
+        etxt_Date.setText(getIntent().getExtras().getString("DATE_KEY"));
         etxt_Hour = (EditText) findViewById(R.id.etxt_Time);
         etxtUbication= (EditText) findViewById(R.id.etxt_Ubication);
         etxtEvent = (EditText) findViewById(R.id.etxt_Event);
