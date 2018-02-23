@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 
 
 /**
@@ -13,12 +14,18 @@ import android.view.View;
 
 public class LoginActivity extends AppCompatActivity {
 
+    EditText nickname, password, fullname;
+    connectSQLite tempConnect;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        connectSQLite miniServer = new connectSQLite(this, "bd users",null,1);
+        tempConnect = new connectSQLite(getApplicationContext(), "bd_users",null,1);
+
+        nickname = (EditText) findViewById(R.id.etxtNombreUsuario);
+        password = (EditText) findViewById(R.id.etxtContrasena);
     }
 
 

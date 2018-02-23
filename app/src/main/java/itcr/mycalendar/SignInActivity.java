@@ -30,8 +30,10 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void onClick(View view){
+
         userRegister();
     }
+
     private void userRegister(){
         connectSQLite conn = new connectSQLite(this, "bd_users", null, 1);
         SQLiteDatabase db = conn.getWritableDatabase();

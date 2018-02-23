@@ -20,6 +20,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import itcr.mycalendar.utilities.eConnectSQLite;
+
 public class MainMenu extends AppCompatActivity {
 
     /**
@@ -43,6 +45,7 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         connectSQLite conn = new connectSQLite(this, "bd_users", null, 1);
+        //eConnectSQLite connect =  new eConnectSQLite(this, "bd_event", null, 1 );
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
