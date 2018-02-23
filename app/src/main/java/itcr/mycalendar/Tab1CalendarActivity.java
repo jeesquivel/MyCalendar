@@ -33,7 +33,7 @@ public class Tab1CalendarActivity  extends  Fragment  {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity(),AddEventActivity.class);
-                String month = Integer.toString(datePicker.getMonth());
+                String month = Integer.toString(datePicker.getMonth()+1);
                 String year = Integer.toString(datePicker.getYear());
                 String day = Integer.toString(datePicker.getDayOfMonth());
                 intent.putExtra("DATE_KEY",day+"/"+month+"/"+year);

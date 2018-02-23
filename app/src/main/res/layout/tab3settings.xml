@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_height="500dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -13,10 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:text="User name:" />
+        android:text="Usear ID:" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/etxt_UserIdSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -26,10 +26,10 @@
         android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_Search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText5"
+        android:layout_alignBottom="@+id/etxt_UserIdSettings"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginEnd="17dp"
@@ -38,7 +38,7 @@
         android:text="Search" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/etxt_NameUserSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -54,18 +54,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText5"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/etxt_NickSettings"
         android:text="Complete name:" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/etxt_PassFirtsSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView8"
-        android:layout_marginTop="11dp"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -75,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText6"
+        android:layout_below="@+id/etxt_NameUserSettings"
         android:layout_marginTop="14dp"
         android:text="Password:" />
 
@@ -83,41 +81,60 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText7"
+        android:layout_below="@+id/etxt_PassFirtsSettings"
         android:layout_marginTop="14dp"
         android:text="Confirm password:" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/etxt_PassConfirmSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView9"
-        android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn_Update"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText8"
-        android:layout_marginTop="25dp"
+        android:layout_below="@+id/etxt_PassConfirmSettings"
+        android:layout_marginTop="11dp"
         android:background="@android:color/holo_green_dark"
         android:text="Update" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btn_Delete"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button7"
-        android:layout_alignBottom="@+id/button7"
-        android:layout_alignEnd="@+id/button3"
-        android:layout_alignRight="@+id/button3"
+        android:layout_alignBottom="@+id/btn_Update"
+        android:layout_alignEnd="@+id/btn_Search"
+        android:layout_alignRight="@+id/btn_Search"
+        android:layout_alignTop="@+id/btn_Update"
         android:background="@android:color/holo_red_dark"
         android:text="Delete" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etxt_UserIdSettings"
+        android:layout_marginTop="21dp"
+        android:text="Nickname:" />
+
+    <EditText
+        android:id="@+id/etxt_NickSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView7"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
 </RelativeLayout>

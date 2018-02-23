@@ -16,6 +16,20 @@
         tools:layout_editor_absoluteY="21dp">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="id User:"
+            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/etxt_IdUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
             android:id="@+id/txtV_Fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
