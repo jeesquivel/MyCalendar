@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                 null);                      //The sort order
 
         int cursorCount = cursor.getCount();
-
+//
         cursor.close();
         db.close();
         if (cursorCount > 0) {
