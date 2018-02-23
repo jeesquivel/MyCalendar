@@ -2,6 +2,7 @@ package itcr.mycalendar;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -44,14 +45,20 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /**
-    private void consult(){
+    private boolean logIn()throws SQLException{
         SQLiteDatabase db = tempConnect.getReadableDatabase();
-        String[] parameter ={nickname.getText().toString(), password.getText().toString()};
-        String[] rParameter = {Utilities.UserNickname, Utilities.Passwords};
+        String selection [] = {nickname.getText().toString(), password.getText().toString()};
+        String rFields  [] = {Utilities.UserNickname, Utilities.Passwords};
 
-        Cursor cursor = db.query(Utilities.UserTable, rParameter, Utilities.UserNickname +"=?");
+        Cursor cursor = db.query(Utilities.UserTable, selection, Utilities.UserNickname + " =?" + "AND" +
+                Utilities.Passwords + "=?",rFields,null,null,null);
+
+        int cursorCount = cursor.getCount();
+        cursor.close();
+        db.close();
+        if(cursorCount > 0){
+            return true;
+        }
+        return false;
     }
-     */
-
 }

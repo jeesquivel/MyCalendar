@@ -1,6 +1,8 @@
 package itcr.mycalendar;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -40,4 +42,7 @@ public class connectSQLite extends SQLiteOpenHelper {
         dataBase.execSQL("DROP TABLE IF EXISTS users");
         onCreate(dataBase);
     }
+
+
+
 }
