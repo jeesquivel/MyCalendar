@@ -70,5 +70,6 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
         values.put(EventUtilities.date, etxt_Date.toString());
         values.put(EventUtilities.place, etxtUbication.toString());
         values.put(EventUtilities.time, etxt_Hour.toString());
+
     }
 }

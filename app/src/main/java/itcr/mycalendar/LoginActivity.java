@@ -1,10 +1,14 @@
 package itcr.mycalendar;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+
+import itcr.mycalendar.utilities.Utilities;
 
 
 /**
@@ -40,6 +44,14 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+    private void consult(){
+        SQLiteDatabase db = tempConnect.getReadableDatabase();
+        String[] parameter ={nickname.getText().toString(), password.getText().toString()};
+        String[] rParameter = {Utilities.UserNickname, Utilities.Passwords};
 
+        Cursor cursor = db.query(Utilities.UserTable, rParameter, Utilities.UserNickname +"=?");
+    }
+     */
 
 }
