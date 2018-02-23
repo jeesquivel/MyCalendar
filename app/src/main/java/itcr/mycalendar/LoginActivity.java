@@ -35,33 +35,59 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public void iniciarButtonOnClick(View view){
-        Intent intent = new Intent(this,MainMenu.class);
-        startActivity(intent);
-        boolean resultL = logIn();
-        if (resultL == false){
-            Toast.makeText(getApplicationContext(),"The User or the password is wrong", Toast.LENGTH_SHORT).show();
-        }
+    public void onClick(View view){
+        boolean temp = checkUser();
     }
 
+
+    public void iniciarButtonOnClick(View view){
+        //Intent intent = new Intent(this,MainMenu.class);
+        boolean resultL = checkUser();
+        if (resultL == true){
+            //Toast.makeText(getApplicationContext(),"The User or the password is wrong", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,MainMenu.class);
+            startActivity(intent);
+        }
+    }
 
     public void signUpButtonOnClick(View view){
         Intent intent=  new Intent(this,SignInActivity.class );
         startActivity(intent);
     }
 
-    private boolean logIn()throws SQLException{
-        SQLiteDatabase db = tempConnect.getReadableDatabase();
-        String selection [] = {nickname.getText().toString(), password.getText().toString()};
-        String rFields  [] = {Utilities.UserNickname, Utilities.Passwords, Utilities.idUser};
+    public boolean checkUser() {
 
-        Cursor cursor = db.query(Utilities.UserTable, selection, Utilities.UserNickname + " =?" + "AND" +
-                Utilities.Passwords + "=?",rFields,null,null,null);
+        // array of columns to fetch
+        String[] columns = {
+                Utilities.UserNickname, Utilities.Passwords, Utilities.idUser
+        };
+        SQLiteDatabase db = tempConnect.getReadableDatabase();
+        // selection criteria
+        String selection = Utilities.UserNickname + " = ?" + " AND " + Utilities.Passwords + " = ?";
+
+        // selection arguments
+        String[] selectionArgs = {nickname.getText().toString(), password.getText().toString()};
+
+        // query user table with conditions
+        /**
+         * Here query function is used to fetch records from user table this function works like we use sql query.
+         * SQL query equivalent to this query function is
+         * SELECT user_id FROM user WHERE user_email = 'jack@androidtutorialshub.com' AND user_password = 'qwerty';
+         */
+        Cursor cursor = db.query(Utilities.UserTable, //Table to query
+                columns,                    //columns to return
+                selection,                  //columns for the WHERE clause
+                selectionArgs,              //The values for the WHERE clause
+                null,                       //group the rows
+                null,                       //filter by row groups
+                null);                      //The sort order
 
         int cursorCount = cursor.getCount();
+
         cursor.close();
         db.close();
-        if(cursorCount > 0){
+        if (cursorCount > 0) {
+            Toast.makeText(getApplicationContext(),"The User or the password is wrong", Toast.LENGTH_SHORT).show();
             return true;
         }
         return false;

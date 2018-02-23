@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_green_dark"
-            android:onClick="iniciarButtonOnClick"
+            android:onClick="onClick"
             android:text="Log In" />
 
         <Space
