@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import itcr.mycalendar.utilities.Utilities;
 
@@ -37,7 +38,10 @@ public class LoginActivity extends AppCompatActivity {
     public void iniciarButtonOnClick(View view){
         Intent intent = new Intent(this,MainMenu.class);
         startActivity(intent);
-        logIn();
+        boolean resultL = logIn();
+        if (resultL == false){
+            Toast.makeText(getApplicationContext(),"The User or the password is wrong", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
@@ -49,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     private boolean logIn()throws SQLException{
         SQLiteDatabase db = tempConnect.getReadableDatabase();
         String selection [] = {nickname.getText().toString(), password.getText().toString()};
-        String rFields  [] = {Utilities.UserNickname, Utilities.Passwords};
+        String rFields  [] = {Utilities.UserNickname, Utilities.Passwords, Utilities.idUser};
 
         Cursor cursor = db.query(Utilities.UserTable, selection, Utilities.UserNickname + " =?" + "AND" +
                 Utilities.Passwords + "=?",rFields,null,null,null);
